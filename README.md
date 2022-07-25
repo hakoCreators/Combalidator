@@ -15,6 +15,6 @@ The purpose is to make easier for the student and the universities the combalida
 
 ## Disclaimer
 
-If you are ask for the credentials when cloning the repository:
+If you are ask for the credentials when cloning or pushing on the repository:
 1. Put your github username
 2. Put you github [token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
