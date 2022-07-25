@@ -13,4 +13,8 @@ The purpose is to make easier for the student and the universities the combalida
 - Look for the **universities with the better combalidation**
 5. Let **users write reviews** about dificulty with combalidations in a specific university
 
+## Disclaimer
 
+If you are ask for the credentials when cloning the repository:
+1. Put your github username
+2. Put you github [token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
