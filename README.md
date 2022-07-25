@@ -14,6 +14,3 @@ The purpose is to make easier for the student and the universities the combalida
 5. Let **users write reviews** about dificulty with combalidations in a specific university
 
 
-For getting access to the repository remenber ```git clone https://<ACCESS_TOKEN>@github.com/<USERNAME>/<REPO>.git```
-
-More info in https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
