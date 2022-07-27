@@ -1,0 +1,28 @@
+{
+  "name": "combalidator",
+  "version": "1.0.0",
+  "description": "A university combalidator searcher",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakoCreators/Combalidator.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hakoCreators/Combalidator/issues"
+  },
+  "homepage": "https://github.com/hakoCreators/Combalidator#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.1",
+    "uuid": "^8.3.2"
+  }
+}
