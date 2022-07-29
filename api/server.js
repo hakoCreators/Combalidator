@@ -1,8 +1,7 @@
-import models from './models/modelsIndex.js'
 import routes from './routes/routesIndex.js'
-
+import 'dotenv/config'
 import express from 'express'
-
+import models, {connectDB} from './models/modelsIndex.js'
 
 const server = express()
 
@@ -24,10 +23,20 @@ server.use('/users',routes.users)
 server.use('/universities',routes.universities)
 server.use('/session',routes.session)
 
+const erase = false;
 
-
-export const startServer = server.listen(3000, () => {
-    console.log(`Server listenening on port 3000`)
+export const startServer = connectDB().then(async () =>{
+    //Reiniciar la base de datos
+    if(erase){
+        await Promise.all([
+            models.Degree.deleteMnay([]),
+            models.University.deleteMnay([]),
+            models.User.deleteMnay([]),
+        ]);
+    }
+    server.listen(process.env.SERVER_PORT, () => {
+        console.log(`Server listenening on port ${process.env.SERVER_PORT}!`)
+    })
 })
 
 

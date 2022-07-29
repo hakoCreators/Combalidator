@@ -1,31 +1,17 @@
-//Info
-let users = {
-    1: {
-      id: '1',
-      username: 'Robin Wieruch',
-    },
-    2: {
-      id: '2',
-      username: 'Dave Davids',
-    },
-  };
-  
-let messages = {
-    1: {
-      id: '1',
-      text: 'Hello World',
-      userId: '1',
-    },
-    2: {
-      id: '2',
-      text: 'By World',
-      userId: '2',
-    },
-  };
+import 'dotenv/config'
+import moongose from 'mongoose';
+import Degree from './degrees.js';
+import User from './users.js';
+import University from './universities.js';
 
+//El objeto moongose arrastra los cambios de escamas y modelos entre archivos
+const connectDB = () => {
+  return moongose.connect(process.env.DATABASE_URL)
+};
 
-export default {
-    users,
-    messages
-}
+//Despues de crear nuestros esquema establecemos los modelos con estos tres respectivos nombres
+const models = { Degree, User, University };
 
+export { connectDB };
+
+export default models;
