@@ -8,15 +8,19 @@ const degreesSchema = new mongoose.Schema(
             required:true,
         },
         subjects:{
-            type:String,
+            type:[String],
         },
         subject_qt:{
             type:Number,
         },
+        university:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"University"
+        }
     },
     { timestamps:true },
 );
 
-const Degree = mongoose.model("Degree",degreesSchema)
+const Degree = new mongoose.model("Degree",degreesSchema)
 
 export default Degree;

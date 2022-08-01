@@ -7,10 +7,10 @@ const universitiesSchema = new mongoose.Schema(
             unique:true,
             required:true,
         },
-        college_degree:{
-            type:[mongoose.Schema.Types.ObjectId],
+        college_degree:[{
+            type:mongoose.Schema.Types.ObjectId,
             ref:"Degree",
-        },
+        }],
         college_degree_qt:{
             type:Number,
         }

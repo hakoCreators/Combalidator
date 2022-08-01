@@ -4,36 +4,42 @@ import {v4 as uuidv4} from 'uuid'
 const router = Router()
 
 //Get data
-router.get("/",(req,res) =>{
-    return res.send(Object.values(req.context.models.messages))
+router.get("/",async (req,res) =>{
+    const universities = await req.context.models.University.find()
+    return res.send(universities)
+})
+//Los modelos son como uan collection en tu base de datos
+router.get("/:id",async (req,res) =>{
+    const university = await req.context.models.University.findById(
+        req.params.id,
+    )
+    return res.send(university)
 })
 
-router.get("/:id",(req,res) =>{
-    return res.send(req.context.models.messages[req.params.id])
+router.post("/",async (req,res) =>{
+    const university = await req.context.models.University.create({
+        name:req.body.text,
+        college_degree:req.body.text,//Esto tendria que ser el id de los grados
+        college_degree_qt:req.body.text,
+    })
+
+    return res.send(university)
 })
 
-router.post("/",(req,res) =>{
-    const id = uuidv4()
-    const message = {
-        id,
-        "text":req.body.text,
-    }
-    req.context.models.messages[id] = message
-    return res.send(message)
-})
-
-router.delete("/:id",(req,res) =>{
+router.delete("/:id",async (req,res) =>{
     
     //Aqui lo que hacemos es extraer el mensaje con la id especifica del objeto asignandolo a la variable message
     //El resto del objeto ira a otherMessages
 
-    const {
-        [req.params.id]:message,
-        ...otherMessages
-    } = req.context.models.messages
-    req.context.models.messages = otherMessages
+    const university = await req.body.context.models.University.findById(
+        req.params.id
+    )
 
-    return res.send(message)
+    if(university){
+        await university.remove()
+    }
+
+    return res.send(university);
 })
 
 

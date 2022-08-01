@@ -4,12 +4,18 @@ const router = Router()
 
 
 //Get data
-router.get("/",(req,res) =>{
-    return res.send(Object.values(req.context.models.users))
+router.get("/", async (req,res) =>{
+    //Dame todos los usuarios
+    const users = await req.context.models.User.find()
+    return res.send(users);
 })
 
-router.get("/:id",(req,res) =>{
-    return res.send(req.context.models.users[req.params.id])
+router.get("/:id",async (req,res) =>{
+    //Usuario en concreto
+    const user  = await req.context.models.User.findById(
+        req.params.id,
+    )
+    return res.send(user);
 })
 
 

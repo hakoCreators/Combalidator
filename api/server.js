@@ -10,10 +10,10 @@ server.use(express.json())
 server.use(express.urlencoded({extended:true}))
 
 //Personaliced midlewares - Con esto pasamos el contexto a el resto de modulos, por eso podemos utilizarlo fuera
-server.use((req,res,next) => {
+server.use(async (req,res,next) => {
     req.context = {
         models,
-        me:models.users[1]
+        me: await models.User.findByLogin("Ismael"),
     }
     next()
 })
@@ -22,6 +22,7 @@ server.use((req,res,next) => {
 server.use('/users',routes.users)
 server.use('/universities',routes.universities)
 server.use('/session',routes.session)
+server.use('/degress',routes.degress)
 
 const erase = false;
 
