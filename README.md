@@ -15,6 +15,13 @@ The purpose is to make easier for the student and the universities the combalida
 - Look for the **universities with the better combalidation**
 6. Let **users write reviews** about dificulty with combalidations in a specific university
 
+## API queries
+
+![Untitled Diagram drawio (1)](https://user-images.githubusercontent.com/35577277/182661845-44105598-022e-473b-904b-65ace6088623.png)
+***
+![Diagrama sin título drawio](https://user-images.githubusercontent.com/35577277/182661861-1d6eac62-5d21-4232-9105-bf9db7a6d137.png)
+
+
 ## Disclaimer
 
 If you are ask for the credentials when cloning or pushing on the repository:
