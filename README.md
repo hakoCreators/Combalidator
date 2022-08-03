@@ -19,7 +19,8 @@ The purpose is to make easier for the student and the universities the combalida
 
 ![Untitled Diagram drawio (1)](https://user-images.githubusercontent.com/35577277/182661845-44105598-022e-473b-904b-65ace6088623.png)
 ***
-![Diagrama sin título drawio](https://user-images.githubusercontent.com/35577277/182661861-1d6eac62-5d21-4232-9105-bf9db7a6d137.png)
+![Diagrama sin título drawio (1)](https://user-images.githubusercontent.com/35577277/182698735-39da7f4c-3177-46db-a6da-acab70838a5c.png)
+
 
 
 ## Disclaimer
